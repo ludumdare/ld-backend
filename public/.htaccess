@@ -1,0 +1,17 @@
+
+RewriteEngine on
+RewriteBase /
+
+#Header set Access-Control-Allow-Origin "http://ludumdare.org"
+#Header set Access-Control-Allow-Credentials "true"
+#Header set Access-Control-Allow-Headers "content-type"
+
+# Bad URLs #
+RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /404.json [R=404,QSA,END]
+
+# Responses #
+DirectoryIndex /index.html
+ErrorDocument 404 /404.json
+ErrorDocument 500 /500.json
