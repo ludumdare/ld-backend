@@ -1,4 +1,4 @@
-Code for the Backend API.
+Code for the API. Requires the backend.
 
 * https://api.ldjam.com
 
